@@ -7,3 +7,6 @@
 document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
 	link.href = link.href.replace('|', '@');
 });
+document.querySelectorAll('a[href^="https://t.me"]').forEach(link => {
+    link.href = link.href.replace(/\.(?=[^/]*$)/, '/');
+});
